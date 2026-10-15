@@ -21,7 +21,7 @@ class RegistrarActivity : AppCompatActivity() {
 
     //Crear instancia del DatabaseHelper
     private lateinit var dbHelper : DatabaseHelper
-    //MÉTODO PRINCIPAL
+    //METODO PRINCIPAL
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -44,7 +44,7 @@ class RegistrarActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    //MÉTODOS POR AQUÍ
+    //METODOS POR AQUI
     private fun registrarUsuario(){
         //Variables para gusrdar los textos
         val nombre = etNombre.text.toString().trim()
@@ -57,7 +57,7 @@ class RegistrarActivity : AppCompatActivity() {
         }
         //Variable que guarda el resultado del registro y llama a la BD
         val registro = dbHelper.registrarUsuario(nombre, correo, password)
-        //Validar que el resultado de la inserción sea verdadero o falso
+        //Validar que el resultado de la insercion sea verdadero o falso
         if(registro){
             //Si el registro es correcto
             Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
